@@ -17,3 +17,6 @@ and run
 ```
 go run main.go --file <filename> --ranges 185.217.94.1/24
 ```
+```
+go run main.go --file <filename> --ranges 185.217.94.1/24 185.217.95.2
+```
