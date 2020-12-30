@@ -8,7 +8,7 @@ go get github.com/alexflint/go-arg
 
 # Test
 
-Crate file with content:
+Create file with content:
 ```
 185.217.95.2
 185.217.94.2
