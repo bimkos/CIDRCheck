@@ -42,7 +42,7 @@ func main() {
 	defer file.Close()
 	count := 0
 	scanner := bufio.NewScanner(file)
-	re := regexp.MustCompile(`(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])`)
+	re := regexp.MustCompile(`(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}`)
 	for scanner.Scan() {
 		matched := re.FindAllString(scanner.Text(), -1)
 		for _, match := range matched {
