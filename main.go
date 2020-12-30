@@ -46,7 +46,6 @@ func main() {
 	for scanner.Scan() {
 		matched := re.FindAllString(scanner.Text(), -1)
 		for _, match := range matched {
-			log.Println(match)
 			for _, v := range rangeArr {
 				ip := net.ParseIP(match)
 				if v.Contains(ip) {
